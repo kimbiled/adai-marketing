@@ -44,13 +44,13 @@ export default function StepTwo({ onNext, onPrev, onComplete, setFormData }) {
       <div className="flex justify-between items-center mt-6 mb-12 ">
         <button
           onClick={onPrev}
-          className="text-[#1261FC] flex items-center text-sm font-medium"
+          className="text-[#FF9500] flex items-center text-sm font-medium"
         >
           ← Go back
         </button>
         <button
           onClick={onNext}
-          className="px-6 py-3 font-medium rounded-lg bg-[#1261FC] text-white hover:bg-blue-700 transition-all h-12 sm25:w-[170px] sm25:w-[170px] sm25:w-[170px]"
+          className="px-6 py-3 font-medium rounded-lg bg-[#FF9500] text-white hover:bg-[#E68600] transition-all h-12 sm25:w-[170px] sm25:w-[170px] sm25:w-[170px]"
         >
           {selectedInterest ? 'Next step' : 'Skip step'}
         </button>

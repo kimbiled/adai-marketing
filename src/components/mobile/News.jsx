@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import FAQ from './Faq';
+// import FAQ from './Faq';
 import { useEffect, useState } from 'react';
 import n1 from '../../assets/desktop/n1.webp';
 import n2 from '../../assets/desktop/n2.webp';
@@ -82,7 +82,7 @@ const News = () => {
   };
 
   return (
-    <div className="font-ppneue flex flex-col w-full rounded-3xl h-auto bg-[#090C21]" id="blog">
+    <div className="font-ppneue flex flex-col w-full rounded-3xl h-auto bg-[#120B04]" id="blog">
       <div className="flex flex-col mx-auto gap-8 w-[85%] mb-12">
         <p className="text-white font-medium text-[40px] mt-16">
           Featured News
@@ -144,14 +144,14 @@ const News = () => {
           <button
             type="button"
             onClick={() => setShowAllNews(true)}
-            className="mx-auto flex h-12 w-40 items-center justify-center rounded-lg bg-white text-base font-book text-[#1261FC]"
+            className="mx-auto flex h-12 w-40 items-center justify-center rounded-lg bg-white text-base font-book text-[#FF9500]"
           >
             See all news
           </button>
         )}
 
         {/* FAQ */}
-        <FAQ />
+        {/* <FAQ /> */}
       </div>
     </div>
   );

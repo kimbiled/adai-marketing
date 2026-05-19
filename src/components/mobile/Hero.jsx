@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
-
-import tick from '../../assets/desktop/Icon.png';
+import tick from '../../assets/icons/tick.svg';
 import berg from '../../assets/mobile/berg.png';
 import disney from '../../assets/mobile/disney.png';
 import forbes from '../../assets/mobile/forbes.png';
@@ -13,13 +11,7 @@ import capital from '../../assets/mobile/capital.png';
 import motiva from '../../assets/mobile/motiva.png';
 import astanahub from '../../assets/mobile/astanahub.png';
 
-import r1 from '../../assets/desktop/r1.webp';
-import r2 from '../../assets/desktop/r2.webp';
-import r3 from '../../assets/desktop/r4.webp';
-import r4 from '../../assets/desktop/r5.webp';
-import r5 from '../../assets/desktop/r6.webp';
-
-import hero from '../../assets/mobile/footer.png';
+import hero from '../../assets/desktop/Hero.svg';
 
 const logos = [
   { src: berg, alt: 'berg', height: 'h-[28px]' },
@@ -35,52 +27,28 @@ const logos = [
   { src: astanahub, alt: 'astanahub', height: 'h-[27px]' },
 ];
 
-const avatars = [r1, r4, r2, r3, r5];
-
 const Hero = () => {
   return (
     <div className="font-ppneue flex flex-col w-[85%] mx-auto">
       <div className="flex flex-col items-center">
-        {/* Аватары с эффектом волны */}
-        <div className="flex flex-row items-center ml-2">
-          {avatars.map((src, index) => (
-            <motion.img
-              key={index}
-              src={src}
-              alt={`Avatar${index + 1}`}
-              className="-ml-2 w-16 h-16 rounded-full"
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                ease: 'easeInOut',
-                delay: index * 0.3,
-              }}pfrb
-            />
-          ))}
-        </div>
-
         <div>
-          <img src={hero} alt="wrapper" className="w-full h-full" />
+          <img src={hero} alt="wrapper" className="w-[340px] h-[120px]" />
         </div>
       </div>
 
       <div className="text-center flex flex-col gap-2 mt-9">
         <h1 className="font-medium text-[25px] leading-[30px]">
-          Your Full Stack Design Team <br />
-          for Web3, Fintech and AI
+          A full-service marketing agency <br />
+          built for ambitious brands
         </h1>
         <p className="text-[#9CA3AF] font-book">
-          Your Full Stack Design Team for Fintech, Games and AI
+          End-to-end creative and strategic marketing services
         </p>
       </div>
 
       <div className="flex gap-2 flex-row justify-around font-medium mt-9">
         <button
-          className="bg-[#1261FC] text-white rounded-lg w-48 h-12"
+          className="bg-[#FF9500] text-white rounded-lg w-48 h-12"
           onClick={() => {
             const element = document.getElementById('recentProjects');
             if (element) {
@@ -94,7 +62,7 @@ const Hero = () => {
           View Portfolio
         </button>
         <button
-          className="bg-transparent border border-[#1261FC] text-[#1261FC] rounded-lg w-48 h-12"
+          className="bg-transparent border border-[#FF9500] text-[#FF9500] rounded-lg w-48 h-12"
           onClick={() => {
             const element = document.getElementById('form-section');
             if (element) {
@@ -105,22 +73,22 @@ const Hero = () => {
             }
           }}
         >
-          Get a Proposal
+          Let's connect
         </button>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-x-3 gap-y-4 mt-9 font-book text-[#090C21]">
-        <div className="flex flex-row gap-3 rounded-2xl min-w-[166px] p-1 h-8 bg-[#F7F7F6] items-center">
+      <div className="mx-auto mt-9 flex max-w-[350px] flex-row flex-wrap justify-center gap-x-3 gap-y-4 font-book text-[#090C21]">
+        <div className="flex h-8 w-[164px] flex-row items-center gap-3 rounded-full bg-[#F7F7F6] p-1">
           <img src={tick} alt="Icon" className="h-6 w-6" />
-          <p>Unlimited requests</p>
+          <p className="text-sm leading-none">Unlimited requests</p>
         </div>
-        <div className="flex flex-row gap-3 rounded-2xl min-w-[166px] p-1 h-8 bg-[#F7F7F6] items-center">
+        <div className="flex h-8 w-[140px] flex-row items-center gap-3 rounded-full bg-[#F7F7F6] p-1">
           <img src={tick} alt="Icon" className="h-6 w-6" />
-          <p>Flat monthly fee</p>
+          <p className="text-sm leading-none">Flat monthly fee</p>
         </div>
-        <div className="flex flex-row gap-3 rounded-2xl min-w-[226px] p-1 h-8 bg-[#F7F7F6] items-center">
+        <div className="flex h-8 w-[200px] flex-row items-center gap-3 rounded-full bg-[#F7F7F6] p-1">
           <img src={tick} alt="Icon" className="h-6 w-6" />
-          <p>Pause or cancel any time</p>
+          <p className="text-sm leading-none">Pause or cancel any time</p>
         </div>
       </div>
 

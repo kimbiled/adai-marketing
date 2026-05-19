@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import FAQDesktop from './FaqDesktop';
+// import FAQDesktop from './FaqDesktop';
 
 import { motion } from 'framer-motion';
 
@@ -83,8 +83,8 @@ const NewsDesktop = () => {
   };
 
   return (
-    <section className="font-ppneue w-full bg-[#090C21] h-auto" id="blog">
-      <div className="flex flex-col w-[85%] items-center mt-20 mx-auto">
+    <section className="font-ppneue w-full bg-[#120B04] h-auto" id="blog">
+      <div className="flex flex-col w-[85%] items-center mt-[200px] mx-auto">
         <div className="mt-[100px] flex flex-col max-w-[1200px] w-full justify-between gap-12">
           <p className="text-white font-medium leading-[92px] text-[84px] ">
             Featured News
@@ -161,13 +161,13 @@ const NewsDesktop = () => {
             <button
               type="button"
               onClick={() => setShowAllNews(true)}
-              className="mx-auto flex h-[48px] w-[172px] items-center justify-center rounded-[8px] bg-white text-[18px] font-book text-[#1261FC] transition duration-300 hover:bg-white/90"
+              className="mx-auto flex h-[48px] w-[172px] items-center justify-center rounded-[8px] bg-white text-[18px] font-book text-[#FF9500] transition duration-300 hover:bg-white/90 mb-[200px]"
             >
               See all news
             </button>
           )}
         </div>
-        <FAQDesktop />
+        {/* <FAQDesktop /> */}
       </div>
     </section>
   );

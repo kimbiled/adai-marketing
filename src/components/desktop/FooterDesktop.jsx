@@ -1,4 +1,4 @@
-import foot from '../../assets/icons/footer.png';
+import hero from '../../assets/desktop/Hero.svg';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -33,144 +33,122 @@ const FooterDesktop = () => {
   };
 
   const getFooterLinkClass = (hoveredItem, currentItem) =>
-    `text-[22px] leading-[24px] font-book cursor-pointer transition-colors duration-300 ease-in-out ${
+    `text-[18px] leading-[24px] font-book cursor-pointer transition-colors duration-300 ease-in-out ${
       hoveredItem && hoveredItem !== currentItem
         ? 'text-[#8B8E98]'
         : 'text-[#090C21]'
     }`;
 
   return (
-    <footer className="font-ppneue flex flex-col w-[85%] items-center mt-[70px] mb-20">
-      <div className="flex flex-row max-w-[1200px] w-full justify-between">
-        <div className="flex flex-col justify-between w-full gap-24">
-          {/* Левая часть */}
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-[84px] font-medium leading-[92px]">
-                Let’s Talk
-              </h2>
-              <a
-                href="mailto:hi@ronindsgn.com"
-                className="text-[34px] text-black leading-[44px] font-book hover:text-gray-500 duration-500 ease-in-out"
+    <footer className="font-ppneue mt-[70px] flex w-full justify-center bg-white py-[80px]">
+      <div className="flex w-[85%] max-w-[1200px] justify-between">
+        <div className="flex flex-col">
+          <img src={hero} alt="adai marketing" className="w-[265px]" />
+
+          <p className="mt-4 text-[14px] font-book leading-[20px] text-[#9CA3AF]">
+            © Adai Marketing 2026
+          </p>
+
+          <div className="mt-7 flex flex-col gap-4">
+            {links.map((link, index) => (
+              <p
+                key={index}
+                onClick={() => handleRedirect(link.url)}
+                className="cursor-pointer text-[14px] font-book leading-[18px] text-[#9CA3AF] transition duration-300 hover:text-[#090C21]"
               >
-                hi@ronindsgn.com
-              </a>
-              <p className="text-[#9CA3AF] font-book text-[18px]">
-                Get your first task done
-                <br /> for free in 24 hours
+                {link.label}
               </p>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Правая часть */}
-            <div className="flex flex-row gap-16">
-              {/* Menu */}
-              <div className="flex flex-col gap-7">
-                <p className="text-[#9CA3AF] text-[22px] font-book">Menu</p>
-                <button
-                  onClick={() => handleNavigation('services')}
-                  onMouseEnter={() => setHoveredMenu('services')}
-                  onMouseLeave={() => setHoveredMenu(null)}
-                  className={`${getFooterLinkClass(
-                    hoveredMenu,
-                    'services',
-                  )} bg-transparent border-none text-left`}
-                >
-                  Services
-                </button>
-                <button
-                  onClick={() => handleNavigation('recentProjects')}
-                  onMouseEnter={() => setHoveredMenu('works')}
-                  onMouseLeave={() => setHoveredMenu(null)}
-                  className={`${getFooterLinkClass(
-                    hoveredMenu,
-                    'works',
-                  )} bg-transparent border-none text-left`}
-                >
-                  Works
-                </button>
-                <button
-                  onClick={() => handleNavigation('about')}
-                  onMouseEnter={() => setHoveredMenu('about')}
-                  onMouseLeave={() => setHoveredMenu(null)}
-                  className={`${getFooterLinkClass(
-                    hoveredMenu,
-                    'about',
-                  )} bg-transparent border-none text-left`}
-                >
-                  About
-                </button>
-                <button
-                  onClick={() => handleNavigation('blog')}
-                  onMouseEnter={() => setHoveredMenu('blog')}
-                  onMouseLeave={() => setHoveredMenu(null)}
-                  className={`${getFooterLinkClass(
-                    hoveredMenu,
-                    'blog',
-                  )} bg-transparent border-none text-left`}
-                >
-                  Blog
-                </button>
-              </div>
-
-              {/* Social */}
-              <div className="flex flex-col gap-7">
-                <p className="text-[#9CA3AF] text-[22px] font-book">Social</p>
-                <a
-                  href="https://www.instagram.com/ronin.dsgn/"
-                  onMouseEnter={() => setHoveredSocial('instagram')}
-                  onMouseLeave={() => setHoveredSocial(null)}
-                  className={getFooterLinkClass(hoveredSocial, 'instagram')}
-                >
-                  Instagram
-                </a>
-                <a
-                  href="https://t.me/jedikuna"
-                  onMouseEnter={() => setHoveredSocial('telegram')}
-                  onMouseLeave={() => setHoveredSocial(null)}
-                  className={getFooterLinkClass(hoveredSocial, 'telegram')}
-                >
-                  Telegram
-                </a>
-                <a
-                  href="https://wa.me/77052771150"
-                  onMouseEnter={() => setHoveredSocial('whatsapp')}
-                  onMouseLeave={() => setHoveredSocial(null)}
-                  className={getFooterLinkClass(hoveredSocial, 'whatsapp')}
-                >
-                  WhatsApp
-                </a>
-                <a
-                  href="https://www.behance.net/ronindsgn"
-                  onMouseEnter={() => setHoveredSocial('behance')}
-                  onMouseLeave={() => setHoveredSocial(null)}
-                  className={getFooterLinkClass(hoveredSocial, 'behance')}
-                >
-                  Behance
-                </a>
-              </div>
-            </div>
+        <div className="flex gap-[120px] pr-[140px]">
+          <div className="flex flex-col gap-6">
+            <p className="text-[18px] font-book leading-[24px] text-[#9CA3AF]">
+              Menu
+            </p>
+            <button
+              onClick={() => handleNavigation('services')}
+              onMouseEnter={() => setHoveredMenu('services')}
+              onMouseLeave={() => setHoveredMenu(null)}
+              className={`${getFooterLinkClass(
+                hoveredMenu,
+                'services',
+              )} bg-transparent border-none text-left`}
+            >
+              Services
+            </button>
+            <button
+              onClick={() => handleNavigation('recentProjects')}
+              onMouseEnter={() => setHoveredMenu('works')}
+              onMouseLeave={() => setHoveredMenu(null)}
+              className={`${getFooterLinkClass(
+                hoveredMenu,
+                'works',
+              )} bg-transparent border-none text-left`}
+            >
+              Works
+            </button>
+            <button
+              onClick={() => handleNavigation('about')}
+              onMouseEnter={() => setHoveredMenu('about')}
+              onMouseLeave={() => setHoveredMenu(null)}
+              className={`${getFooterLinkClass(
+                hoveredMenu,
+                'about',
+              )} bg-transparent border-none text-left`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => handleNavigation('blog')}
+              onMouseEnter={() => setHoveredMenu('blog')}
+              onMouseLeave={() => setHoveredMenu(null)}
+              className={`${getFooterLinkClass(
+                hoveredMenu,
+                'blog',
+              )} bg-transparent border-none text-left`}
+            >
+              Blog
+            </button>
           </div>
 
-          {/* Лого и копирайт */}
-          <div className="flex flex-row justify-between items-end">
-            <div className="flex flex-col items-center gap-4">
-              <img src={foot} alt="footer" className="w-[164px]" />
-              <p className="text-[#9CA3AF] text-lg font-book">
-                © Ronin Design 2026
-              </p>
-            </div>
-
-            <div className="flex flex-row gap-12">
-              {links.map((link, index) => (
-                <p
-                  key={index}
-                  onClick={() => handleRedirect(link.url)}
-                  className="text-[#9CA3AF] text-lg hover:text-black cursor-pointer transition duration-300"
-                >
-                  {link.label}
-                </p>
-              ))}
-            </div>
+          <div className="flex flex-col gap-6">
+            <p className="text-[18px] font-book leading-[24px] text-[#9CA3AF]">
+              Social
+            </p>
+            <a
+              href="https://www.instagram.com/ronin.dsgn/"
+              onMouseEnter={() => setHoveredSocial('instagram')}
+              onMouseLeave={() => setHoveredSocial(null)}
+              className={getFooterLinkClass(hoveredSocial, 'instagram')}
+            >
+              Instagram
+            </a>
+            <a
+              href="https://t.me/jedikuna"
+              onMouseEnter={() => setHoveredSocial('telegram')}
+              onMouseLeave={() => setHoveredSocial(null)}
+              className={getFooterLinkClass(hoveredSocial, 'telegram')}
+            >
+              Telegram
+            </a>
+            <a
+              href="https://wa.me/77052771150"
+              onMouseEnter={() => setHoveredSocial('whatsapp')}
+              onMouseLeave={() => setHoveredSocial(null)}
+              className={getFooterLinkClass(hoveredSocial, 'whatsapp')}
+            >
+              WhatsApp
+            </a>
+            <a
+              href="https://www.behance.net/ronindsgn"
+              onMouseEnter={() => setHoveredSocial('behance')}
+              onMouseLeave={() => setHoveredSocial(null)}
+              className={getFooterLinkClass(hoveredSocial, 'behance')}
+            >
+              Behance
+            </a>
           </div>
         </div>
       </div>

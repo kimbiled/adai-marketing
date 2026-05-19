@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
 import hero from '../../assets/desktop/Hero.svg';
-import tick from '../../assets/desktop/Icon.png';
+import tick from '../../assets/icons/tick.svg';
 import berg from '../../assets/desktop/berg.png';
 import disney from '../../assets/desktop/disney.png';
 import forbes from '../../assets/desktop/forbes.png';
@@ -13,12 +12,6 @@ import capital from '../../assets/desktop/capital.png';
 import motiva from '../../assets/desktop/motiva.png';
 import astanahub from '../../assets/desktop/astanahub.png';
 import pocketbroker from '../../assets/desktop/pocketbroker.svg';
-
-import r1 from '../../assets/desktop/r1.webp';
-import r2 from '../../assets/desktop/r2.webp';
-import r4 from '../../assets/desktop/r4.webp';
-import r5 from '../../assets/desktop/r5.webp';
-import r6 from '../../assets/desktop/r6.webp';
 
 const logos = [
   { src: pocketbroker, alt: 'pocketbroker', height: 'h-16' },
@@ -35,87 +28,41 @@ const logos = [
   { src: astanahub, alt: 'astanahub', height: 'h-[42px]' },
 ];
 
-const getRandomAnimation = () => ({
-  y: [0, Math.random() * -10, Math.random() * 10, 0], // Случайные колебания по вертикали
-  x: [0, Math.random() * 6 - 3, Math.random() * -6 + 3, 0], // Хаотичные движения влево-вправо
-  rotate: [0, Math.random() * 10 - 5, Math.random() * -10 + 5, 0], // Легкое покачивание
-  transition: {
-    duration: Math.random() * 5 + 6, // Разброс по длительности (от 6 до 11 сек)
-    ease: 'easeInOut',
-    repeat: Infinity,
-    repeatType: 'reverse',
-  },
-});
-
 const HeroDesktop = () => {
   return (
     <div className="font-ppneue flex flex-col w-[85%] items-center mt-[68px]">
       <div className="relative">
         <img src={hero} alt="hero" />
-        <motion.img
-          src={r1}
-          alt="r1"
-          className="absolute top-28 left-24 w-[108px] h-[108px] rounded-full"
-          animate={getRandomAnimation()}
-        />
-
-        <motion.img
-          src={r2}
-          alt="r2"
-          className="absolute top-48 right-[376px] w-[92px] h-[92px] rounded-full"
-          animate={getRandomAnimation()}
-        />
-
-        <motion.img
-          src={r5}
-          alt="r5"
-          className="absolute top-14 left-[480px] w-[68px] h-[68px] rounded-full"
-          animate={getRandomAnimation()}
-        />
-
-        <motion.img
-          src={r6}
-          alt="r6"
-          className="absolute top-20 right-52 w-[68px] h-[68px] rounded-full"
-          animate={getRandomAnimation()}
-        />
-
-        <motion.img
-          src={r4}
-          alt="r4"
-          className="absolute top-44 right-2 w-[68px] h-[68px] rounded-full"
-          animate={getRandomAnimation()}
-        />
       </div>
       <div className="flex flex-row max-w-[1200px] w-full justify-between">
         <div className="flex flex-col gap-5 mt-9">
           <h1 className="font-medium text-[34px] leading-[37px]">
-            All your design done for one <br /> fixed monthly fee
+            A full-service marketing agency <br /> built for ambitious brands
           </h1>
           <p className="text-[#090C21] font-book text-lg">
-            Your Full Stack Design Team for Fintech, Games and AI
+            End-to-end creative and strategic marketing services
           </p>
         </div>
         <div className="flex flex-col gap-3 mt-12 font-book">
           <div className="flex flex-row gap-3 rounded-2xl w-[183px] p-1 h-8 bg-[#F7F7F6] items-center">
             <img src={tick} alt="Icon" className="h-6 w-6" />
-            <p>Unlimited requests</p>
+            <p>UX/UI & no-code</p>
           </div>
-          <div className="flex flex-row gap-3 rounded-2xl w-[176px] p-1 h-8 bg-[#F7F7F6] items-center">
+          <div className="flex flex-row gap-3 rounded-2xl w-[200px] p-1 h-8 bg-[#F7F7F6] items-center">
             <img src={tick} alt="Icon" className="h-6 w-6" />
-            <p>Flat monthly fee</p>
+            <p>Marketing campaigns</p>
           </div>
-          <div className="flex flex-row gap-3 rounded-2xl w-[226px] p-1 h-8 bg-[#F7F7F6] items-center">
+          <div className="flex flex-row gap-3 rounded-2xl w-[190px] p-1 h-8 bg-[#F7F7F6] items-center">
             <img src={tick} alt="Icon" className="h-6 w-6" />
-            <p>Pause or cancel any time</p>
+            <p>Content production</p>
           </div>
         </div>
         <div>
           <div className="relative max-w-[445px] w-full overflow-hidden mt-10 flex flex-col gap-8">
             <div className="flex gap-2 flex-row font-medium">
               <button
-                className="bg-[#1261FC] text-white rounded-lg w-44 h-12 transition-all duration-200 
-                   hover:bg-[#0F55E0] active:bg-[#0D4CC7] focus:border focus:border-[#64A3FF]"
+                className="bg-[#FF9500] text-white rounded-lg w-44 h-12 transition-all duration-200 
+                   hover:bg-[#E68600] active:bg-[#CC7700] focus:border focus:border-[#FFB84D]"
                 onClick={() => {
                   const element = document.getElementById('recentProjects');
                   if (element) {
@@ -134,8 +81,8 @@ const HeroDesktop = () => {
                 View Portfolio
               </button>
               <button
-                className="bg-transparent border border-[#1261FC] text-[#1261FC] rounded-lg w-44 h-12 transition-all duration-200 
-                   hover:bg-[#E6EEFF] active:bg-[#CCDFFF] active:border-[#0D4CC7] focus:border-[#64A3FF]"
+                className="bg-transparent border border-[#FF9500] text-[#FF9500] rounded-lg w-44 h-12 transition-all duration-200 
+                   hover:bg-[#FFF3E0] active:bg-[#FFE0B2] active:border-[#CC7700] focus:border-[#FFB84D]"
                 onClick={() => {
                   const element = document.getElementById('form-section');
                   if (element) {

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import Preloader from './pages/Preloader';
-import PreloaderDesktop from './pages/PreloaderDesktop';
 
 import MobileLayout from './pages/MobileLayout';
 import DesktopLayout from './pages/DesktopLayout';
@@ -28,34 +26,8 @@ import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import Privacy from './pages/Privacy';
 
-import hero from './assets/mobile/footer.png';
-import item1 from './assets/desktop/item1.png';
-import item2 from './assets/desktop/item2.png';
-import item3 from './assets/desktop/item3.png';
-import item4 from './assets/desktop/item4.png';
-import phone from './assets/mobile/phone.png';
-import r1 from './assets/desktop/r1.webp';
-import r2 from './assets/desktop/r2.webp';
-import r4 from './assets/desktop/r4.webp';
-import r5 from './assets/desktop/r5.webp';
-import r6 from './assets/desktop/r6.webp';
-import heros from './assets/desktop/Hero.svg';
 import CookiesDesktop from './pages/CookiesDesktop';
 
-const preloadImages = [
-  hero,
-  item1,
-  item2,
-  item3,
-  item4,
-  phone,
-  r1,
-  r2,
-  r4,
-  r5,
-  r6,
-  heros,
-];
 const scrollToFormSection = () => {
   const scroll = () => {
     const element = document.getElementById('form-section');
@@ -94,10 +66,6 @@ function App() {
   }, []);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 430);
-  const [loading, setLoading] = useState(
-    !sessionStorage.getItem('sessionStarted'),
-  );
-  const [videoEnded, setVideoEnded] = useState(false);
   useEffect(() => {
     document.querySelectorAll('img').forEach((img) => {
       if (!img.hasAttribute('loading')) {
@@ -111,67 +79,6 @@ function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  useEffect(() => {
-    const checkImagesLoaded = () => {
-      return new Promise((resolve) => {
-        let checkInterval = setInterval(() => {
-          const images = document.querySelectorAll('img');
-          let allLoaded = Array.from(images).every(
-            (img) => img.complete && img.naturalHeight !== 0,
-          );
-          if (allLoaded) {
-            clearInterval(checkInterval);
-            resolve();
-          }
-        }, 500);
-      });
-    };
-
-    if (!sessionStorage.getItem('sessionStarted')) {
-      setLoading(true);
-
-      Promise.all([
-        ...preloadImages.map(
-          (src) =>
-            new Promise((resolve) => {
-              const img = new Image();
-              img.src = src;
-              img.onload = resolve;
-              img.onerror = resolve;
-            }),
-        ),
-        document.fonts ? document.fonts.ready : Promise.resolve(),
-        checkImagesLoaded(),
-      ]).then(() => {
-        if (videoEnded) handlePreloaderComplete();
-      });
-    }
-  }, [videoEnded]);
-
-  const handleVideoEnd = () => {
-    setVideoEnded(true);
-    if (!loading) handlePreloaderComplete();
-  };
-
-  const handlePreloaderComplete = () => {
-    setLoading(false);
-    sessionStorage.setItem('sessionStarted', 'true');
-  };
-
-  if (loading) {
-    return isMobile ? (
-      <Preloader
-        onComplete={handlePreloaderComplete}
-        onVideoEnd={handleVideoEnd}
-      />
-    ) : (
-      <PreloaderDesktop
-        onComplete={handlePreloaderComplete}
-        onVideoEnd={handleVideoEnd}
-      />
-    );
-  }
 
   return (
     <>

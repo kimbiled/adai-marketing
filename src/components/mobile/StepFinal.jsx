@@ -5,14 +5,14 @@ export default function StepFinal({ onReset }) {
       <div className="w-12 h-12">
         <img src={tick} alt="icon" />
       </div>
-      <p className="text-[40px] font-medium text-[#1261FC]">Thank You!</p>
+      <p className="text-[40px] font-medium text-[#FF9500]">Thank You!</p>
       <p className="text-sm font-medium mt-2">
         Your email is already in our priority mailbox
       </p>
       <p className="text-sm font-book">We will contact you very soon</p>
       <button
         onClick={onReset}
-        className="mt-6 text-[#1261FC] text-sm flex items-center gap-2"
+        className="mt-6 text-[#FF9500] text-sm flex items-center gap-2"
       >
         Send again →
       </button>

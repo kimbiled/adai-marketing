@@ -6,7 +6,7 @@ export default function StepFinal({ onReset }) {
         <img src={tick} alt="icon" />
       </div>
 
-      <p className="text-[44px] font-medium text-[#1261FC] leading-[48px]">
+      <p className="text-[44px] font-medium text-[#FF9500] leading-[48px]">
         Thank You!
       </p>
 
@@ -19,7 +19,7 @@ export default function StepFinal({ onReset }) {
 
       <button
         onClick={onReset}
-        className="mt-7 text-[#1261FC] text-lg flex items-center gap-2"
+        className="mt-7 text-[#FF9500] text-lg flex items-center gap-2"
       >
         Send again →
       </button>

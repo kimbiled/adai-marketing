@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import logo from '../../assets/desktop/LogoDesktop.svg';
+import logo from '../../assets/icons/logo.svg';
 import { useLocation } from 'react-router-dom';
 
 const calendarUrl = 'https://calendar.app.google/nYhyEheWC7yKt57y8';
@@ -61,9 +61,9 @@ const HeaderDesktop = () => {
         >
           <a
             href="/"
-            className="flex h-10 w-9 items-center justify-center rounded-lg bg-[#F7F7F6] p-[10px]"
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F7F7F6] p-[10px]"
           >
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo"/>
           </a>
 
           <nav
@@ -89,7 +89,7 @@ const HeaderDesktop = () => {
             href={calendarUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 w-[135px] items-center justify-center rounded-lg bg-[#3B6DFF] text-[16px] text-white transition hover:brightness-95 active:brightness-90"
+            className="inline-flex h-10 w-[135px] items-center justify-center rounded-lg bg-[#FF9500] text-[16px] text-white transition hover:brightness-95 active:brightness-90"
           >
             Book a call
           </a>

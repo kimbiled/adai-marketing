@@ -36,6 +36,17 @@ const services = [
     img: item2,
   },
   {
+    title: 'Marketing',
+    description: [
+      'Growth Marketing',
+      'Paid Ads',
+      'SEO & Content',
+      'Social Media Strategy',
+      'Influencer Campaigns',
+    ],
+    img: item4,
+  },
+  {
     title: 'Editing',
     description: [
       'Long form',
@@ -65,7 +76,7 @@ const services = [
 const expandTransition = { duration: 0.32, ease: [0.4, 0, 0.2, 1] };
 
 const ContentDesktop = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(2);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleToggle = (index) => {
@@ -83,20 +94,20 @@ const ContentDesktop = () => {
 
       <div className="mt-[100px] flex flex-row max-w-[1200px] w-full justify-between">
         <div className="flex flex-col gap-6">
-          <div className="w-36 h-11 px-4 py-2 rounded-lg border-[1px] border-[#1261FC] flex items-center justify-center">
-            <p className="text-[20px]">Our services</p>
+          <div className="w-36 h-11 px-4 py-2 rounded-lg border-[1px] border-[#FF9500] flex items-center justify-center">
+            <p className="text-[20px]">Our Services</p>
           </div>
           <h3 className="font-medium text-[84px] leading-[92px] text-[#090C21]">
-            <span className="text-[#1261FC]">
-              All you want
+            <span className="text-[#FF9500]">
+              All you want,
               <br />
-              delivered,{' '}
+              delivered{' '}
             </span>
             on time
           </h3>
           <h5 className="font-book text-[22px] leading-[30px] text-[#090C21] opacity-80">
-            from logo and website design
-            <br /> to a SaaS platform or mobile app
+            from branding and website design
+            <br /> to content, campaigns and digital growth
           </h5>
         </div>
 

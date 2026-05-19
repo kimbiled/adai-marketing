@@ -36,6 +36,17 @@ const services = [
     img: item2,
   },
   {
+    title: 'Marketing',
+    description: [
+      'Growth Marketing',
+      'Paid Ads',
+      'SEO & Content',
+      'Social Media Strategy',
+      'Influencer Campaigns',
+    ],
+    img: item4,
+  },
+  {
     title: 'Editing',
     description: [
       'Long form',
@@ -63,7 +74,7 @@ const services = [
 ];
 
 const Content = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(2);
   // const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleToggle = (index) => {
@@ -77,19 +88,19 @@ const Content = () => {
         id="services"
       >
         <div className="flex flex-col gap-3 ">
-          <div className="max-w-[95px] w-full h-[30px] rounded-lg border-[1px] border-[#1261FC] flex items-center justify-center px-2 py-1">
+          <div className="max-w-[95px] w-full h-[30px] rounded-lg border-[1px] border-[#FF9500] flex items-center justify-center px-2 py-1">
             <p className="text-sm">Our Services</p>
           </div>
           <h3 className="font-medium text-[40px] leading-[48px]">
-            <span className="text-[#1261FC]">
+            <span className="text-[#FF9500]">
               All you want, <br />
             </span>
             delivered on time
           </h3>
           <h5 className="leading-[23px] max-w-[330px] w-full">
-            from logo and website design
+            from branding and website design
             <br />
-            to a SaaS platform or mobile app
+            to content, campaigns and digital growth
           </h5>
         </div>
 

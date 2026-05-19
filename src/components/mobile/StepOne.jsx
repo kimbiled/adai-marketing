@@ -108,8 +108,8 @@ export default function StepOne({ onComplete, onNext, setFormData }) {
         onClick={handleNextStep}
         className={`font-medium mt-4 px-4 py-2 sm25:text-base sm75:text-base sm20:text-base rounded-lg mb-12 h-12 sm25:w-[345px] sm75:w-[305px] sm20:w-[260px] transition ${
           fullName.trim() && email.trim() && isEmailValid
-            ? 'bg-[#1261FC] hover:bg-blue-600 text-white'
-            : 'bg-[#A3C4FD] text-white'
+            ? 'bg-[#FF9500] hover:bg-[#E68600] text-white'
+            : 'bg-[#FFD7AD] text-white'
         }`}
       >
         Next step

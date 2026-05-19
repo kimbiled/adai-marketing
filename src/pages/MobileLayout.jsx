@@ -3,7 +3,7 @@ import Hero from '../components/mobile/Hero';
 // import HeroVideo from '../components/mobile/HeroVideo';
 import Content from '../components/mobile/Content';
 import Projects from '../components/mobile/Projects';
-import Leaders from '../components/mobile/Leaders';
+// import Leaders from '../components/mobile/Leaders';
 import Comments from '../components/mobile/Comments';
 import Form from '../components/mobile/Form';
 import News from '../components/mobile/News';
@@ -62,7 +62,7 @@ const MobileLayout = () => {
       {/* <HeroVideo src="/videos/hero.mp4" poster="/images/hero-poster.jpg" /> */}
       <Content />
       <Projects />
-      <Leaders />
+      {/* <Leaders /> */}
       <Comments slides={testimonials} options={OPTIONS} />
       {/* <StickyBanner /> */}
       <Form />

@@ -3,7 +3,7 @@ import HeroDesktop from '../components/desktop/HeroDesktop';
 import ContentDesktop from '../components/desktop/ContentDesktop';
 import CompanyDesktop from '../components/desktop/CompanyDesktop';
 import ProjectsD from '../components/desktop/ProjectsD';
-import LeadersDesktop from '../components/desktop/LeadersDesktop';
+// import LeadersDesktop from '../components/desktop/LeadersDesktop';
 import CommentsDesktop from '../components/desktop/CommentsDesktop';
 import FormDesktop from '../components/desktop/FormDesktop';
 import NewsDesktop from '../components/desktop/NewsDesktop';
@@ -28,7 +28,7 @@ const DesktopLayout = () => {
         {/* <ProjectsDesktop /> */}
         <ProjectsD />
         {/* <ProposalDesktop /> */}
-        <LeadersDesktop />
+        {/* <LeadersDesktop /> */}
         <CommentsDesktop />
         <FormDesktop />
         <NewsDesktop />

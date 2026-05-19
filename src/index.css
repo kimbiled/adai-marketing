@@ -122,7 +122,7 @@ details summary::-webkit-details-marker {
   height: var(--slide-height);
   width: var(--slide-size);
   user-select: none;
-  background-color: #EAF8FF; 
+  background-color: #FFF8EA; 
 }
 .embla__controls {
   display: flex;
@@ -139,10 +139,10 @@ details summary::-webkit-details-marker {
 }
 
 .embla__dot {
-  -webkit-tap-highlight-color: rgba(18, 97, 252, 0.5);
+  -webkit-tap-highlight-color: rgba(255, 149, 0, 0.45);
   -webkit-appearance: none;
   appearance: none;
-  background-color: #B6E4FF; /* Цвет неактивной точки */
+  background-color: #E3D7C2; /* Цвет неактивной точки */
   touch-action: manipulation;
   text-decoration: none;
   cursor: pointer;
@@ -159,7 +159,7 @@ details summary::-webkit-details-marker {
 }
 
 .embla__dot--selected {
-  background-color: #1261FC !important; /* Синий цвет активного */
+  background-color: #FF9500 !important; /* Цвет активного */
   width: 8px !important; /* Увеличенный размер активного */
   height: 8px !important;
 }

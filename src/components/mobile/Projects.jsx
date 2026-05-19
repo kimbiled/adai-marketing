@@ -395,14 +395,6 @@ const Projects = () => {
           )}
         </>
       ))}
-
-      <div className="flex flex-col items-center mt-7">
-        <button className="bg-[#1261FC] text-white rounded-lg w-40 h-12">
-          <a href="https://drive.google.com/file/d/15t6fMY4dYh54MsYRphr_bPqehjTpZIZC/view?pli=1">
-            View all works
-          </a>
-        </button>
-      </div>
     </div>
   );
 };

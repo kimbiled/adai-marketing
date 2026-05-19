@@ -96,7 +96,7 @@ const FormDesktop = () => {
         <div className="flex flex-col gap-20">
           <div className="flex flex-col">
             <p className="font-medium leading-[92px] text-[84px]">
-              <span className="text-[#1261FC]">Let's </span>create
+              <span className="text-[#FF9500]">Let's </span>create
               <br />
               together{' '}
             </p>
@@ -152,7 +152,7 @@ const FormDesktop = () => {
                         width: `calc(${rightEdge} - (${leftEdge}))`,
                       }}
                       animate={{
-                        backgroundColor: isCompleted ? '#1261FC' : '#D4E0ED',
+                        backgroundColor: isCompleted ? '#FF9500' : '#E0CA9E',
                       }}
                       transition={{ duration: 0.5 }}
                     />
@@ -191,14 +191,14 @@ const FormDesktop = () => {
                           <div
                             className={`flex h-full w-full items-center justify-center rounded-full ${
                               isPassedOrActive
-                                ? 'border border-[#1261FC] bg-white'
-                                : 'bg-[#D4E0ED]'
+                                ? 'border border-[#FF9500] bg-white'
+                                : 'bg-[#E0CA9E]'
                             }`}
                           >
                             <div
                               className={`rounded-full ${
                                 isPassedOrActive
-                                  ? 'h-[11px] w-[11px] bg-[#1261FC]'
+                                  ? 'h-[11px] w-[11px] bg-[#FF9500]'
                                   : 'h-[8px] w-[8px] bg-white'
                               }`}
                             />
@@ -208,8 +208,8 @@ const FormDesktop = () => {
                       <span
                         className={`mt-4 text-center text-[16px] font-book ${
                           isPassedOrActive
-                            ? 'text-[#1261FC]'
-                            : 'text-[#D4E0ED]'
+                            ? 'text-[#FF9500]'
+                            : 'text-[#E0CA9E]'
                         }`}
                       >
                         {stepLabels[index]}

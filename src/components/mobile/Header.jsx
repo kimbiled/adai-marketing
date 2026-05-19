@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import logo from '../../assets/icons/logo.png';
+import logo from '../../assets/icons/logo.svg';
 import logoBurger from '../../assets/icons/LogoBurger.png';
 import close from '../../assets/icons/close.png';
 import burger from '../../assets/icons/burger.png';
@@ -232,12 +232,12 @@ const Header = () => {
               </button>
               <div>
                 <a href="/">
-                  <img src={logo} alt="Logo" width={34} height={28} />
+                  <img src={logo} alt="Logo" width={28} height={28} />
                 </a>
               </div>
             </div>
             <button
-              className="bg-[#3B6DFF] text-white font-medium px-[34px] py-2 rounded-full sm20:h-12"
+              className="bg-[#FF9500] text-white font-medium px-[34px] py-2 rounded-full sm20:h-12"
               onClick={(e) => {
                 e.preventDefault();
                 const isHomePage = window.location.pathname === '/';

@@ -1,0 +1,16 @@
+{
+  "short_name": "Adai Marketing",
+  "name": "Adai Marketing",
+  "description": "Full-service marketing agency for ambitious brands.",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ff9500",
+  "background_color": "#ffffff"
+}

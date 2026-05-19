@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
@@ -98,7 +98,6 @@ import uk from '../../assets/desktop/uk.svg';
 import usa from '../../assets/desktop/usa.svg';
 
 //ui elements
-import metall from '../../assets/desktop/metall.png';
 import star from '../../assets/icons/stared.png';
 import verify from '../../assets/icons/Icon.png';
 
@@ -486,10 +485,6 @@ function ProjectTile({ project }) {
 }
 
 export default function ProjectsD() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [moveDirection, setMoveDirection] = useState({ x: 0, y: 0 });
-  const [visible, setVisible] = useState(false);
-  const metallRef = useRef(null);
   const projectByTitle = Object.fromEntries(
     projects.map((project) => [project.title, project]),
   );
@@ -505,32 +500,6 @@ export default function ProjectsD() {
     const timeoutId = window.setTimeout(preload, 250);
     return () => window.clearTimeout(timeoutId);
   }, []);
-
-  const handleMouseMove = (e) => {
-    const containerRect = e.currentTarget.getBoundingClientRect();
-    const metallRect = metallRef.current?.getBoundingClientRect();
-    const mouseX = e.clientX - containerRect.left;
-    const mouseY = e.clientY - containerRect.top;
-
-    if (metallRect) {
-      const centerX = metallRect.left + metallRect.width / 2;
-      const centerY = metallRect.top + metallRect.height / 2;
-      const offsetX = (e.clientX - centerX) / (metallRect.width / 2);
-      const offsetY = (e.clientY - centerY) / (metallRect.height / 2);
-
-      setMoveDirection({
-        x: -offsetX * 40,
-        y: -offsetY * 40,
-      });
-    }
-
-    setPosition({ x: mouseX, y: mouseY });
-  };
-
-  const handleClick = () => {
-    window.location.href =
-      'https://drive.google.com/file/d/1FizTso9ZKKUooa-Rl6n0Sz6khVYuJCa1/view';
-  };
 
   return (
     <div
@@ -572,45 +541,6 @@ export default function ProjectsD() {
                 project={projectByTitle[projectTitle]}
               />
             ))}
-
-            <div
-              className="relative mx-auto py-24"
-              onMouseEnter={() => setVisible(true)}
-              onMouseLeave={() => setVisible(false)}
-              onMouseMove={handleMouseMove}
-            >
-              <motion.img
-                ref={metallRef}
-                src={metall}
-                alt="View all works"
-                className="relative h-[400px] w-[400px] cursor-pointer transition-transform duration-200 ease-in-out hover:scale-110"
-                onClick={handleClick}
-                animate={{
-                  x: moveDirection.x,
-                  y: moveDirection.y,
-                }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 200,
-                  damping: 8,
-                  duration: 0.15,
-                }}
-              />
-
-              <div className="pointer-events-none absolute inset-x-0 top-1/2 w-full -translate-y-1/2 transform whitespace-nowrap text-center text-[34px] font-book text-white">
-                View all works
-              </div>
-              {visible && (
-                <div
-                  className="pointer-events-none absolute h-16 w-16 rounded-full bg-black opacity-80"
-                  style={{
-                    top: `${position.y}px`,
-                    left: `${position.x}px`,
-                    transform: 'translate(-50%, -50%)',
-                  }}
-                />
-              )}
-            </div>
           </div>
         </div>
       </div>

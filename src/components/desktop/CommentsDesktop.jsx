@@ -85,10 +85,10 @@ export default function CommentsDesktop() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="mt-[180px] flex h-[520px] w-full items-center bg-[#EAF8FF] font-ppneue">
+    <section className="mt-[180px] flex h-[520px] w-full items-center bg-[#FFF8EA] font-ppneue">
       <div className="mx-auto grid w-[85%] max-w-[1200px] grid-cols-[0.94fr_1fr] items-start gap-[92px]">
         <h2 className="pt-[68px] text-[84px] font-medium leading-[82px] text-[#080B1F]">
-          <span className="text-[#1261FC]">Trusted</span> by
+          <span className="text-[#FF9500]">Trusted</span> by
           <br />
           product teams
         </h2>
@@ -150,7 +150,7 @@ export default function CommentsDesktop() {
                         cy="41"
                         r="38"
                         fill="none"
-                        stroke="#1261FC"
+                        stroke="#FF9500"
                         strokeWidth="4"
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}

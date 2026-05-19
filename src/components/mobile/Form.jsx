@@ -7,9 +7,9 @@ import StepFour from './StepFour';
 import StepFinal from './StepFinal';
 import emailjs from '@emailjs/browser';
 
-import done from '../../assets/mobile/done.png';
+import done from '../../assets/icons/tick.svg';
 import active from '../../assets/mobile/active.svg';
-import ncompleted from '../../assets/mobile/n-completed.png';
+import ncompleted from '../../assets/icons/n-completed.png';
 
 const steps = [1, 2, 3, 4];
 const stepLabels = ['Contacts', 'Service', 'Budget', 'Details'];
@@ -104,7 +104,7 @@ export default function Form() {
         <>
           <div>
             <p className="text-[40px] font-medium leading-[48px]">
-              <span className="text-[#1261FC]">Let's</span> create
+              <span className="text-[#FF9500]">Let's</span> create
               <br /> together
             </p>
             <p className="font-book mt-2">
@@ -140,7 +140,7 @@ export default function Form() {
                     width: `calc(${rightEdge} - (${leftEdge}))`,
                   }}
                   animate={{
-                    backgroundColor: isCompleted ? '#1261FC' : '#D4E0ED',
+                    backgroundColor: isCompleted ? '#FF9500' : '#E0CA9E',
                   }}
                   transition={{ duration: 0.5 }}
                 />
@@ -182,7 +182,7 @@ export default function Form() {
                   </motion.div>
                   <span
                     className={`mt-2 text-center text-[16px] font-book ${
-                      isPassedOrActive ? 'text-[#1261FC]' : 'text-[#D4E0ED]'
+                      isPassedOrActive ? 'text-[#FF9500]' : 'text-[#E0CA9E]'
                     }`}
                   >
                     {stepLabels[index]}
