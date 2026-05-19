@@ -16,14 +16,14 @@ const Terms = () => {
   const sections = [
     {
       id: 'about',
-      title: '1. About Ronin',
+      title: '1. About Adai Marketing',
       content: (
         <>
           <p>
-            Ronin is a digital design studio offering creative services in
-            UX/UI, branding, and product design. The Site provides information
-            about our team, portfolio, and services, and allows users to contact
-            us for business inquiries.
+            Adai Marketing is a digital marketing agency offering creative
+            services in UX/UI, branding, and product design. The Site provides
+            information about our team, portfolio, and services, and allows
+            users to contact us for business inquiries.
           </p>
         </>
       ),
@@ -48,8 +48,8 @@ const Terms = () => {
               to our systems.
             </li>
             <li>
-              You will not impersonate Ronin or submit false or misleading
-              information.
+              You will not impersonate Adai Marketing or submit false or
+              misleading information.
             </li>
           </ul>
           <p className="mt-4">
@@ -66,8 +66,8 @@ const Terms = () => {
         <>
           <p className="font-medium">
             All content on the Site — including designs, text, visuals, and
-            branding — is the intellectual property of Ronin or its clients,
-            unless otherwise stated.
+            branding — is the intellectual property of Adai Marketing or its
+            clients, unless otherwise stated.
           </p>
           <p>You may not:</p>
           <ul className="list-disc pl-5 mt-4 space-y-1 ml-1">
@@ -77,7 +77,7 @@ const Terms = () => {
             <li>Claim ownership over our designs or work.</li>
             <li>
               Use our branding in a way that misrepresents your relationship
-              with Ronin.
+              with Adai Marketing.
             </li>
           </ul>
         </>
@@ -135,7 +135,8 @@ const Terms = () => {
       content: (
         <>
           <p>
-            To the maximum extent allowed by law, Ronin will not be liable for:
+            To the maximum extent allowed by law, Adai Marketing will not be
+            liable for:
           </p>
           <ul className="list-disc pl-5 mt-4 space-y-1 ml-1">
             <li>Any indirect, incidental, or consequential damages.</li>
@@ -171,31 +172,6 @@ const Terms = () => {
         </p>
       ),
     },
-
-    {
-      id: 'contact',
-      title: '9. Contact Us',
-      content: (
-        <>
-          <p>For any questions regarding these Terms, you can contact us at:</p>
-          <div className="mt-4 space-y-2">
-            <p className="font-medium">Ronin</p>
-            <p className="font-medium">
-              Email:{' '}
-              <a href="mailto:hi@ronindsgn.com" className="underline font-base">
-                hi@ronindsgn.com
-              </a>
-            </p>
-            <p className="font-medium">
-              Website:{' '}
-              <a href="https://ronindsgn.com" className="underline font-base">
-                https://ronindsgn.com
-              </a>
-            </p>
-          </div>
-        </>
-      ),
-    },
   ];
 
   return (
@@ -216,34 +192,24 @@ const Terms = () => {
         <div className="border-[1px] border-[#D4E0ED] rounded-[12px] w-full p-[16px] flex flex-col gap-[10px] mt-8 mb-8 text-xs">
           <div>
             <p>
-              <span className="font-medium">Website:</span>
-              <a href="https://ronindsgn.com/" className="underline">
-                {' '}
-                https://ronindsgn.com
-              </a>
+              <span className="font-medium">Entity:</span> Adai Marketing
             </p>
             <p>
-              <span className="font-medium">Entity:</span> Ronin
-            </p>
-            <p>
-              <span className="font-medium">Effective Date:</span> June 26, 2025
+              <span className="font-medium">Effective Date:</span> May 18, 2026
             </p>
           </div>
 
           {/* Введение (всегда видимое) */}
           <div>
-            <p className="mb-4">
-              Welcome to Ronin. These Terms and Conditions ("Terms") govern your
-              access to and use of the Ronin website and any related services,
-              forms, or communications provided through{' '}
-              <span>
-                <a href="https://ronindsgn.com/" className="underline">
-                  https://ronindsgn.com{' '}
-                </a>
-              </span>{' '}
-              ("Site"). By accessing or using the Site, you agree to be bound by
-              these Terms. If you do not agree, please do not use the Site.
-            </p>
+            <div>
+              <p className="mb-4">
+                Welcome to Adai Marketing. These Terms and Conditions ("Terms")
+                govern your access to and use of Adai Marketing's services,
+                forms, and communications. By accessing or using our services,
+                you agree to be bound by these Terms. If you do not agree,
+                please do not use our services.
+              </p>
+            </div>
           </div>
         </div>
 

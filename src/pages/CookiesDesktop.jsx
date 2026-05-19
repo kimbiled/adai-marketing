@@ -107,34 +107,6 @@ const CookiesDesktop = () => {
         </>
       ),
     },
-
-    {
-      id: 'contact',
-      title: '6. Contact Us',
-      content: (
-        <>
-          <p>
-            If you have any questions about how we use cookies, feel free to
-            reach out:
-          </p>
-          <div className="mt-4 space-y-2">
-            <p className="font-medium">Ronin</p>
-            <p className="font-medium">
-              Email:{' '}
-              <a href="mailto:hi@ronindsgn.com" className="underline font-base">
-                hi@ronindsgn.com
-              </a>
-            </p>
-            <p className="font-medium">
-              Website:{' '}
-              <a href="https://ronindsgn.com" className="underline font-base">
-                https://ronindsgn.com
-              </a>
-            </p>
-          </div>
-        </>
-      ),
-    },
   ];
 
   return (
@@ -155,21 +127,14 @@ const CookiesDesktop = () => {
         <div className="border-[1px] border-[#D4E0ED] rounded-[12px] w-full p-[32px] flex flex-col gap-[10px] mt-16 mb-8">
           <div>
             <p>
-              <span className="font-medium">Last updated:</span> June 26, 2025
-            </p>
-            <p>
-              <span className="font-medium">Applies to:</span>
-              <a href="https://ronindsgn.com/" className="underline">
-                {' '}
-                https://ronindsgn.com
-              </a>
+              <span className="font-medium">Last updated:</span> May 18, 2026
             </p>
           </div>
 
           {/* Введение (всегда видимое) */}
           <div>
             <p className="mb-4">
-              At Ronin, we use cookies and similar tracking technologies to
+              At Adai Marketing, we use cookies and similar tracking technologies to
               enhance your browsing experience, analyze website traffic, and
               understand how users interact with our content. This Cookie Policy
               explains what cookies are, how we use them, and how you can manage

@@ -106,17 +106,6 @@ const FormDesktop = () => {
               and innovation
             </p>
           </div>
-          <div className="flex flex-col mt-6 ">
-            <p className="font-book  leading-[24px] text-[22px] text-[#9CA3AF]">
-              Contact us
-            </p>
-            <a
-              className="font-book text-[22px] leading-[22px] mt-3 hover:text-gray-500 duration-500 ease-in-out"
-              href="mailto:hi@ronindsgn.com"
-            >
-              hi@ronindsgn.com
-            </a>
-          </div>
         </div>
         <div
           id="form-section"
@@ -207,9 +196,7 @@ const FormDesktop = () => {
                       </div>
                       <span
                         className={`mt-4 text-center text-[16px] font-book ${
-                          isPassedOrActive
-                            ? 'text-[#FF9500]'
-                            : 'text-[#E0CA9E]'
+                          isPassedOrActive ? 'text-[#FF9500]' : 'text-[#E0CA9E]'
                         }`}
                       >
                         {stepLabels[index]}

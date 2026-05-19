@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import logo from '../../assets/icons/logo.svg';
-import logoBurger from '../../assets/icons/LogoBurger.png';
 import close from '../../assets/icons/close.png';
 import burger from '../../assets/icons/burger.png';
 
@@ -77,7 +76,7 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                  <img src={logoBurger} alt="logo" width={34} height={28} />
+                  <img src={logo} alt="logo" width={34} height={28} />
                 </motion.div>
                 <motion.button
                   className="text-2xl p-2 focus:outline-none"
@@ -201,15 +200,9 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.7 }}
               >
-                <div className="font-book">
-                  <p>Get in touch</p>
-                  <a href="mailto:hi@ronindsgn.com" className="text-white ">
-                    hi@ronindsgn.com
-                  </a>
-                </div>
                 <div className="text-xs flex flex-col gap-3 font-book mt-[2px]">
                   <p className="text-white">Privacy Policy & Cookies</p>
-                  <p>© Ronin Design 2026</p>
+                  <p>© Adai marketing 2026</p>
                 </div>
               </motion.div>
             </div>

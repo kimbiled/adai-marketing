@@ -48,7 +48,7 @@ const ProjectPage = () => {
             <span>
               By{' '}
               <span className="ml-1 underline-offset-4 text-[#090C21] underline">
-                Ronin
+                Adai Marketing
               </span>
             </span>
             <span>•</span>

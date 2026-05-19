@@ -95,12 +95,6 @@ const Privacy = () => {
             <li>Request deletion</li>
             <li>Opt out of future communication</li>
           </ul>
-          <p className="mt-4">
-            To make a request, contact:{' '}
-            <a href="mailto:hi@ronindsgn.com" className="underline">
-              hi@ronindsgn.com
-            </a>
-          </p>
         </>
       ),
     },
@@ -173,30 +167,6 @@ const Privacy = () => {
         </p>
       ),
     },
-    {
-      id: 'contact',
-      title: '11. Contact Us',
-      content: (
-        <>
-          <p>If you have any questions about this policy, contact us at:</p>
-          <div className="mt-4 space-y-2">
-            <p className="font-medium">Ronin</p>
-            <p className="font-medium">
-              Email:{' '}
-              <a href="mailto:hi@ronindsgn.com" className="underline font-base">
-                hi@ronindsgn.com
-              </a>
-            </p>
-            <p className="font-medium">
-              Website:{' '}
-              <a href="https://ronindsgn.com" className="underline font-base">
-                https://ronindsgn.com
-              </a>
-            </p>
-          </div>
-        </>
-      ),
-    },
   ];
 
   return (
@@ -220,20 +190,16 @@ const Privacy = () => {
               <span className="font-medium">Effective Date:</span> June 26, 2025
             </p>
             <p>
-              <span className="font-medium">Website:</span>
-              <a href="https://ronindsgn.com/"> https://ronindsgn.com/</a>
-            </p>
-            <p>
-              <span className="font-medium">Company:</span> Ronin
+              <span className="font-medium">Company:</span> Adai Marketing
             </p>
           </div>
 
           {/* Введение (всегда видимое) */}
           <div>
             <p className="mb-4">
-              At Ronin, we respect your privacy and are committed to protecting
-              any personal data you share with us. This Privacy Policy explains
-              how we collect, use, and safeguard
+              At Adai Marketing, we respect your privacy and are committed to
+              protecting any personal data you share with us. This Privacy
+              Policy explains how we collect, use, and safeguard
               <br /> your information when you visit our website, submit a
               request, or interact with our content.
             </p>

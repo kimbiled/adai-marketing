@@ -36,7 +36,7 @@ const NotFound = () => {
       </div>
 
       {/* Футер */}
-      <footer className="pb-16 font-book text-xs ">© Ronin Design 2026</footer>
+      <footer className="pb-16 font-book text-xs ">© Adai Marketing 2026</footer>
     </div>
   );
 };

@@ -33,7 +33,7 @@ export default function NewsArticleMobileTemplate({ article }) {
           <span>
             By{' '}
             <span className="text-[#090C21] underline underline-offset-4">
-              Ronin
+              Adai Marketing
             </span>
           </span>
           <span>• {article.date}</span>

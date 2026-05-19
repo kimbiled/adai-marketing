@@ -32,7 +32,7 @@ const NewsArticleDesktopTemplate = ({ article }) => {
           <div className="mt-6 flex items-center gap-2 text-[14px] font-book text-[#9CA3AF]">
             <span>By</span>
             <span className="text-[#090C21] underline underline-offset-4">
-              Ronin
+              Adai Marketing
             </span>
             <span>·</span>
             <span>{article.date}</span>

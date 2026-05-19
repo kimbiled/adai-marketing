@@ -41,7 +41,7 @@ const FirstNews = () => {
           <span>
             By{' '}
             <span className="underline underline-offset-4 text-[#090C21]">
-              Ronin
+              Adai Marketing
             </span>
           </span>
           <span>• Jan 1, 2025</span>
